@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends 'html/base1.html' %}
+
+{% block title_block %}
+<title>delete page</title>
+{% endblock %}
+
+{% block body_block %}
+<br>
+<h1>Conformation of {{beer.name}} Delete?</h1><hr>
+<form method="POST">
+    {% csrf_token %}
+    <input type="submit" class="btn btn-danger" name="" value="Delete"><br><br>
+    <a href="http://127.0.0.1:8000/app1/list" class="btn btn-primary">cancel</a>
+</form>
+{% endblock %}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <title>results page</title>
+</head>
+<body>
+    {% if request.session %}
+    <h1>Thanks for your confirmation.... Please confirm it once.</h1>
+    <ul>
+        {% for key, value in request.session.items  %}
+        <li>{{key | upper}} : {{value | title}}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No Information Available</p>
+    {% endif %}
+</body>
+</html>

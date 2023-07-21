@@ -1,0 +1,22 @@
+img {
+    height: 200px;
+    width: 30%;
+    margin: 1.5%;
+    float: left;
+    padding-bottom: 45px;
+}
+h1 {
+    text-align: center;
+    color: blue;
+}
+ol {
+    color: darkblue;
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+}
+html {
+    width: 100%;
+}
+body {
+    background-color: aqua;
+}

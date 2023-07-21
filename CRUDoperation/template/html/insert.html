@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends 'html/base.html' %}
+{% block title_block %}
+<title>insert page</title>
+{% endblock %}
+
+{% block body_block %}
+<h1>Employee Insert Form.</h1>
+<form method="POST">
+{{form.as_p}}
+{% csrf_token %}
+<input type="submit" class="btn btn-success" value="Insert New Record">
+</form>
+{% endblock %}

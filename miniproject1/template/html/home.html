@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.6.1.slim.js" integrity="sha256-tXm+sa1uzsbFnbXt8GJqsgi2Tw+m4BLGDof6eUPjbtk=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+    <title>exam page</title>
+
+    <script>
+        $(document).ready(function() 
+        {
+            $("#b1").click(function()
+            {
+              $(".ai").show();  
+              $(".a").attr("disabled", true);
+            });
+        });
+
+        function getanswers() 
+        {
+            document.getElementById('UserAnswers').innerHTML = "";
+            var e = document.getElementsByTagName('input');
+            for(i = 0; i < e.length; i = i + 1) 
+            {
+                if(e[i].type == "radio") 
+                {
+                    if(e[i].checked) 
+                    {
+                        document.getElementById('UserAnswers').innerHTML +=  "Q" + e[i].name + ") The Answers you are selected is: " + e[i].value + "<br>"
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>simple quiz</h1><hr>
+        <div>
+            {%  for x in page %}
+            <table>
+                <tr>
+                    <td>{{x.id}} ) {{x.question}}</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" class="a" name="{{x.id}}" id="option1" value="{{x.option1}}">{{x.option1}}</td><br>
+                </tr>
+                <tr>
+                    <td><input type="radio" class="a" name="{{x.id}}" id="option2" value="{{x.option2}}">{{x.option2}}</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" class="a" name="{{x.id}}" id="option3" value="{{x.option3}}">{{x.option3}}</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" class="a" name="{{x.id}}" id="option4" value="{{x.option4}}">{{x.option4}}</td>
+                </tr>
+                <tr>
+                    <label id="corans" class="ai" style="display: none; color:green"><strong>{{x.correct}}</strong></label>
+                </tr>
+            </table><hr>
+            {% endfor %}
+            <input type="submit" class="a" value="submit test" id="b1" onclick="getanswers()">
+            <br>
+            <b id="UserAnswers"></b>
+        </div>
+    </div>
+</body>
+</html>

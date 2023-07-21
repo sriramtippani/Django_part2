@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends 'html/base1.html' %}
+
+{% block title_block %}
+<title>form page</title>
+{% endblock %}
+
+{% block body_block %}
+<br>
+<h1>Add New Beer Information.</h1><hr>
+<form method="POST">
+    {{form.as_p}}
+    {% csrf_token %}
+    <input type="submit" class="btn btn-primary" name="" value="Insert / Update Information"><br><br>
+    <a href="http://127.0.0.1:8000/app1/list" class="btn btn-primary">Back</a>
+</form>
+{% endblock %}

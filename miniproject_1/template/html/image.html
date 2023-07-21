@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% extends 'html/base.html' %}
+{% load static %}
+
+{% block title_block %}
+<title>photo</title>
+{% endblock %}
+
+{% block style_block %}
+<style>
+  .container {
+    margin-top: 80px;
+  }
+  .m {
+    border: 5px solid greenyellow;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+  }
+  html {
+    width: 100%;
+  }
+  body {
+    background: url(https://images.unsplash.com/photo-1634141737038-a7d1aa9c932d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+</style>
+{% endblock %}
+
+{% block body_block %}
+<div class="container">
+    {% if type == 'photo' %}
+    <img class="m" src="{% static 'image/m1.jpg' %}" alt="no image">
+    <img class="m" src="{% static 'image/m2.jpg' %}" alt="no image">
+    <img class="m" src="{% static 'image/m3.jpg' %}" alt="no image">
+    <img class="m" src="{% static 'image/m4.jpg' %}" alt="no image">
+    {% else %}
+    <h1>Tempararly their is no images are available.</h1>
+    {% endif %}
+</div>
+{% endblock %}

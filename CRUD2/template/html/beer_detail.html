@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% extends 'html/base1.html' %}
+
+{% block title_block %}
+<title>detail page</title>
+{% endblock %}
+
+{% block style_block %}
+<style>
+    .jumbotron {
+        background-color: brown;
+        text-align:left;
+    }
+</style>
+{% endblock %}
+
+{% block body_block %}
+<div class="jumbotron">
+    <h1>{{beer.first_name | title}} Beer Information.</h1><hr>
+    <ul>
+        <li>First Name: {{beer.first_name | upper}}</li>
+        <li>Last Name: {{beer.last_name | upper}}</li>
+        <li>Preffered Name: {{beer.preffered_name | title}}</li>
+        <li>Title Name: {{beer.title_name | title}}</li>
+        <li>Email: {{beer.email}}</li>
+        <li>Contact Number: {{beer.contact_no}}</li>
+        <li>Contact ext: {{beer.contact_ext}}</li>
+        <li>Join Date: {{beer.join_date}}</li>
+        <li>Join Date Format: {{beer.join_date_format | upper}}</li>
+        <li>Team: {{beer.team | title}}</li>
+        <li>Job Title: {{beer.job_title | title}}</li>
+    </ul>
+    <a href="http://127.0.0.1:8000/app1/list" class="btn btn-primary">Back</a>
+</div>
+{% endblock %}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{% static 'css/detail.css' %}">
+
+    <title>detail view</title>
+
+    <style>
+        .jumbotron {
+            background-color: transparent;
+            text-align: inherit;
+        }
+        h1 {
+            color: blue;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        li {
+            color: brown;
+            font-family:Verdana, Geneva, Tahoma, sans-serif
+        }
+        body {
+            background: url(https://media.istockphoto.com/id/1387064340/photo/abstract-white-studio-background-for-product-presentation-empty-room-with-shadows-of-window.jpg?s=612x612&w=0&k=20&c=Mlp6ob7-TtztTht_D6Doi_SM5Yk4Q_ZeryfnI7zuh1A=);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+
+</head>
+<body>
+<div class="jumbotron">
+    <h1>{{emp_list.first_name | title}} Information.</h1><hr>
+    <ul>
+        <li>First Name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{emp_list.first_name | upper}}</li>
+        <li>Last Name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{emp_list.last_name | upper}}</li>
+        <li>Preffered Name: &nbsp;{{emp_list.preffered_name | title}}</li>
+        <li>Title Name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{emp_list.title_name | title}}</li>
+        <li>Email: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{emp_list.email}}</li>
+        <li>Contact Number: {{emp_list.contact_no}}</li>
+        <li>Contact ext: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{emp_list.contact_ext}}</li>
+        <li>Join Date: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{emp_list.join_date}}</li>
+        <li>Join Date Format: {{emp_list.join_date_format | upper}}</li>
+        <li>Team:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{emp_list.team | title}}</li>
+        <li>Job Title:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{emp_list.job_title | title}}</li>
+    </ul>
+    <a href="http://127.0.0.1:8000/app1/list" class="btn btn-primary">Back</a>
+</div>
+</body>
+</html>

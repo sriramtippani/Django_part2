@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{% static 'css/form1.css' %}">
+
+    <title>insert form</title>
+
+    <style>
+        input {
+            position: absolute;
+            right: 32%;
+            border-radius: 10px;
+            border-color: cornflowerblue;
+            background-color: cyan;
+        }
+        label {
+            color: black;
+        }
+        h1 {
+            color:deeppink;
+        }
+        body {
+            background: url(https://images.unsplash.com/photo-1533035353720-f1c6a75cd8ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHBsYWlufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container" align="center">
+        <h1>Add New User Information.</h1><hr>
+        <form method="POST">
+            {{form.as_p}}
+            {% csrf_token %}
+    <input type="submit" class="btn btn-success" name="" value="Insert / Update Information"><br><br><a href="http://127.0.0.1:8000/app1/list" class="btn btn-primary">Back</a><br>
+    
+</form>
+    </div>
+</body>
+</html>

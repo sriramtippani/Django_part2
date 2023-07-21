@@ -1,0 +1,36 @@
+h1 {
+    text-align: center;
+    margin: auto !important;
+    margin-top: 50px !important;
+}
+body {
+    text-align: center !important;
+    background: url(https://images.unsplash.com/photo-1610570919994-3cc63d980736?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGxpZ2h0JTIwY29sb3JzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#bb {
+    border: 2px greenyellow solid;
+    width: 30%;
+    box-sizing: border-box;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 10px;
+    box-shadow: 10px 10px black;
+    background-color: deeppink;
+    padding: 10px;
+}
+input {
+    background-color: darkkhaki;
+    border-radius: 5px;
+}
+label {
+    width: 100px;
+    display: inline-block;
+    text-align: left;
+}
+.btn-primary {
+    margin: auto;
+    background-color: chartreuse !important;
+    color: black !important;
+}

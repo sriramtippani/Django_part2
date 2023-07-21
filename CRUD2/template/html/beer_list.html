@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% extends 'html/base1.html' %}
+
+{% block title_block %}
+<title>list page</title>
+{% endblock %}
+
+{% block style_block %}
+<style>
+    table {
+        margin: auto;
+        border: 3px solid black;
+        box-shadow: 5px 5px 5px 5px;
+        box-sizing: inherit;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        margin-top: 40px;
+    }
+    th {
+        padding: 10px;
+        background-color: chartreuse;
+        color: red;
+        border-radius: 10px;
+        border: coral solid 3px;
+    }
+    td {
+        padding: 10px;
+        background-color: cornsilk;
+        color: blue;
+        border-radius: 10px;
+        border: magenta solid 3px;
+    }
+    h1 {
+        text-align: center;
+    }
+</style>
+{% endblock %}
+
+{% block body_block %}
+<h1>Users Information Dashboard.</h1><hr>
+<table>
+    <thead>
+        <th>User Name</th>
+        <th>Details</th>
+        <th>Update</th>
+        <th>Delete</th>
+    </thead>
+    {% for x in beer %}
+    <tr>
+        <td>{{x.first_name | title}}</td>
+        <td><a href="http://127.0.0.1:8000/app1/detail/{{x.id}}">Details</a></td>
+        <td><a href="http://127.0.0.1:8000/app1/update/{{x.id}}">Update</a></td>
+        <td><a href="http://127.0.0.1:8000/app1/delete/{{x.id}}">Delete</a></td>
+    </tr>
+    {% endfor %}
+</table><br>
+<a href="http://127.0.0.1:8000/app1/create" class="btn btn-primary">Insert Information</a>
+{% endblock %}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <title>detail page</title>
+</head>
+<body>
+    <div class="container">
+        <h1>{{books.title}} Information</h1><hr>
+        <ul>
+            <li>Title: {{books.title}}</li>
+            <li>Author: {{books.author}}</li>
+            <li>Pages: {{books.pages}}</li>
+            <li>Price: {{books.price}}</li>
+        </ul><hr>
+        <a class="btn btn-warning" href="http://127.0.0.1:8000/home/update/{{books.id}}">Update Book Information</a><br><br>
+
+        <a class="btn btn-danger" href="http://127.0.0.1:8000/home/delete/{{books.id}}">Delete Book Information</a>
+    </div>
+</body>
+</html>

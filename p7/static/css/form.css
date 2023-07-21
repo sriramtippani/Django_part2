@@ -1,0 +1,18 @@
+.container{
+    margin: auto;
+    margin-top: 200px;
+}
+#id_name {
+    background-color: aqua;
+    box-shadow: 10px 10px blue;
+    border-radius: 10px;
+}
+#id_marks {
+    background-color: darkseagreen;
+    box-shadow: 10px 10px blue;    
+    border-radius: 10px;
+}
+h1 {
+    color: red;
+    margin-bottom: 20px;
+}

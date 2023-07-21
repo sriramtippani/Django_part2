@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% extends 'html/base.html' %}
+
+{% block title_block %}
+<title>logout page</title>
+{% endblock %}
+
+{% block style_block %}
+<style>
+    h1 {
+        margin-top: 250px;
+        color: greenyellow;
+    }
+    body {
+        background: url(https://images.unsplash.com/photo-1431032843361-ec2cd229c751?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fHBsYWlufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+{% endblock %}
+
+{% block body_block %}
+<div class="container" align="center">
+    <h1>Thanks for visiting Kyvor Genomics</h1>
+    <h2>Login Here:</h2>
+    <a class="btn btn-primary" href="/accounts/login" role="button">login</a>
+</div>
+{% endblock %}

@@ -1,0 +1,56 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/page.css' %}">
+    
+    <title>page</title>
+</head>
+<body>
+    {% if type == 'movies' %}
+
+    <h2>{{h1}}</h2>
+    <ol>
+        <li>{{m1}}</li>
+        <li>{{m2}}</li>
+        <li>{{m3}}</li>
+    </ol>
+    
+    <img src="{% static 'images/1.jpg' %}" alt="no image available">
+    <img src="{% static 'images/2.jpg' %}" alt="no image available">
+    <img src="{% static 'images/3.jpg' %}" alt="no image available">
+    
+    {% elif type == 'sports' %}
+
+    <h2>{{h1}}</h2>
+    <ol>
+        <li>{{m1}}</li>
+        <li>{{m2}}</li>
+        <li>{{m3}}</li>
+    </ol>
+    
+    <img src="{% static 'images/4.jpg' %}" alt="no image available">
+    <img src="{% static 'images/5.jpg' %}" alt="no image available">
+    <img src="{% static 'images/6.jpg' %}" alt="no image available">
+
+    {% elif type == 'politics' %}
+
+    <h2>{{h1}}</h2>
+    <ol>
+        <li>{{m1}}</li>
+        <li>{{m2}}</li>
+        <li>{{m3}}</li>
+    </ol>
+    
+    <img src="{% static 'images/7.jpg' %}" alt="no image available">
+    <img src="{% static 'images/8.jpg' %}" alt="no image available">
+    <img src="{% static 'images/9.jpg' %}" alt="no image available">
+
+    {% endif %}
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% extends 'html/base.html' %}
+
+{% block title_block %}
+<title>login page</title>
+{% endblock %}
+
+{% block style_block %}
+<style>
+    input {
+        position: absolute;
+        right: 35%;
+        border-radius: 10px;
+        border-color: cornflowerblue;
+        background-color: cyan;
+    }
+    h1 {
+        margin-top: 200px;
+        color: brown;
+    }
+    label {
+        color: crimson;
+    }
+    body {
+        background: url(https://images.unsplash.com/photo-1528459584353-5297db1a9c01?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1799&q=80);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+{% endblock %}
+
+{% block body_block %}
+<div class="container" align="center">
+    <h1>Login User</h1><hr><br>
+    <form method="POST">
+    {{form.as_p}}
+    {% csrf_token %}
+    <button class="btn btn-primary" type="submit">login</button>
+    </form>
+</div>
+{% endblock %}
